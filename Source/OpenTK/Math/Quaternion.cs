@@ -32,7 +32,9 @@ namespace OpenTK
     /// <summary>
     /// Represents a Quaternion.
     /// </summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     [StructLayout(LayoutKind.Sequential)]
     public struct Quaternion : IEquatable<Quaternion>
     {

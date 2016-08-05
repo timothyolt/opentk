@@ -32,8 +32,14 @@ namespace OpenTK
 {
 
     /// <summary>2-component Vector of the Half type. Occupies 4 Byte total.</summary>
-    [Serializable, StructLayout(LayoutKind.Sequential)]
-    public struct Vector2h : ISerializable, IEquatable<Vector2h>
+#if !(PORTABLE)
+    [Serializable]
+#endif
+    [StructLayout(LayoutKind.Sequential)]
+    public struct Vector2h : IEquatable<Vector2h>
+#if !(PORTABLE)
+        , ISerializable
+#endif
     {
         #region Fields
 
@@ -270,6 +276,7 @@ namespace OpenTK
         #endregion Constants
 
         #region ISerializable
+        #if !(PORTABLE)   
 
         /// <summary>Constructor used by ISerializable to deserialize the object.</summary>
         /// <param name="info"></param>
@@ -289,6 +296,7 @@ namespace OpenTK
             info.AddValue("Y", this.Y);
         }
 
+        #endif
         #endregion ISerializable
 
         #region Binary dump

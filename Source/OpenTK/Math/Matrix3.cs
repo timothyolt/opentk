@@ -30,7 +30,9 @@ namespace OpenTK
     /// <summary>
     /// Represents a 3x3 matrix containing 3D rotation and scale.
     /// </summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     [StructLayout(LayoutKind.Sequential)]
     public struct Matrix3 : IEquatable<Matrix3>
     {

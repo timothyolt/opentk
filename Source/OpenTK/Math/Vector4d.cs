@@ -29,7 +29,9 @@ using System.Xml.Serialization;
 namespace OpenTK
 {
     /// <summary>Represents a 4D vector using four double-precision floating-point numbers.</summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     [StructLayout(LayoutKind.Sequential)]
     public struct Vector4d : IEquatable<Vector4d>
     {

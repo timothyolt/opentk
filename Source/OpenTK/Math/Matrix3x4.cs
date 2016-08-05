@@ -30,7 +30,9 @@ namespace OpenTK
     /// <summary>
     /// Represents a 3x4 Matrix
     /// </summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     [StructLayout(LayoutKind.Sequential)]
     public struct Matrix3x4 : IEquatable<Matrix3x4>
     {

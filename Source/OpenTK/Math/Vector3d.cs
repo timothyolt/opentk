@@ -31,7 +31,9 @@ namespace OpenTK
     /// <summary>
     /// Represents a 3D vector using three double-precision floating-point numbers.
     /// </summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     [StructLayout(LayoutKind.Sequential)]
     public struct Vector3d : IEquatable<Vector3d>
     {

@@ -75,8 +75,14 @@ namespace OpenTK
     /// but must not lead to GL interruption or termination. Providing a denormalized number or negative zero to GL must yield
     /// predictable results.
     /// </remarks>
-    [Serializable, StructLayout(LayoutKind.Sequential)]
-    public struct Half : ISerializable, IComparable<Half>, IFormattable, IEquatable<Half>
+#if !(PORTABLE)
+    [Serializable]
+#endif
+    [StructLayout(LayoutKind.Sequential)]
+    public struct Half : IComparable<Half>, IFormattable, IEquatable<Half>
+#if !(PORTABLE)
+        , ISerializable
+#endif
     {
         #region Internal Field
 
@@ -397,6 +403,7 @@ namespace OpenTK
         #endregion Constants
 
         #region ISerializable
+        #if !(PORTABLE)
 
         /// <summary>Constructor used by ISerializable to deserialize the object.</summary>
         /// <param name="info"></param>
@@ -413,7 +420,8 @@ namespace OpenTK
         {
             info.AddValue("bits", this.bits);
         }
-
+        
+        #endif
         #endregion ISerializable
 
         #region Binary dump

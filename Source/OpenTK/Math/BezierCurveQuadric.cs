@@ -17,7 +17,9 @@ namespace OpenTK
     /// <summary>
     /// Represents a quadric bezier curve with two anchor and one control point.
     /// </summary>
+#if !(PORTABLE)
     [Serializable]
+#endif
     public struct BezierCurveQuadric
     {
         #region Fields
