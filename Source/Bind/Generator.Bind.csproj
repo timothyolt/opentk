@@ -110,9 +110,6 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="CSharpSpecWriter.cs" />
     <Compile Include="FuncProcessor.cs" />
     <Compile Include="GL2\GL4Generator.cs" />
@@ -313,8 +310,5 @@
   </ProjectExtensions>
   <ItemGroup>
     <Folder Include="Specifications\Docs\" />
-    <Folder Include="Specifications\GL2\ES\" />
-    <Folder Include="Specifications\GL2\ES\3.1\" />
-    <Folder Include="Specifications\GL2\ES\1.1\" />
   </ItemGroup>
 </Project>

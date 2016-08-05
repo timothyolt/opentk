@@ -4,7 +4,7 @@
     <ProjectType>Local</ProjectType>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A625BE88-0000-0000-0000-000000000000}</ProjectGuid>
+    <ProjectGuid>{34DEDFAF-DF27-4E9A-ADE0-0E49EDC6D4B4}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <AssemblyKeyContainerName>
@@ -14,7 +14,7 @@
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>
     </AppDesignerFolder>
@@ -40,7 +40,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -58,7 +57,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>full</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -75,7 +73,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>none</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Documentation|AnyCPU'">
     <OutputPath>..\..\Binaries\OpenTK\Release\</OutputPath>
@@ -85,7 +82,6 @@
     <DefineConstants>TRACE;</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLControl.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nsis|AnyCPU'">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -102,7 +98,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>none</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>True</SignAssembly>
@@ -180,13 +175,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OpenTK\OpenTK.Core.csproj">
-      <Project>{7fad8904-1e24-4eac-9b64-d0ed631936f9}</Project>
-      <Name>OpenTK.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenTK\OpenTK.Math.csproj">
-      <Project>{68c406cc-bfd9-4d4b-b450-e95574308836}</Project>
-      <Name>OpenTK.Math</Name>
+    <ProjectReference Include="..\OpenTK\OpenTK.Compat.csproj">
+      <Project>{a37a7e14-0000-0000-0000-000000000000}</Project>
+      <Name>OpenTK.Compat</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -212,7 +203,6 @@
     </ConfigurationOverrideFile>
     <RegisterForComInterop>False</RegisterForComInterop>
     <FileAlignment>4096</FileAlignment>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMinimal|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -229,6 +219,5 @@
     </ConfigurationOverrideFile>
     <RegisterForComInterop>False</RegisterForComInterop>
     <FileAlignment>4096</FileAlignment>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
 </Project>

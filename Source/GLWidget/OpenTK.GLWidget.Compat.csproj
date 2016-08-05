@@ -2,23 +2,22 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A625BE88-0000-0000-0000-000000000000}</ProjectGuid>
+    <ProjectGuid>{CA314461-9057-432B-B46C-296F7A3DBB99}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>OpenTK.GLControl</AssemblyName>
+    <AssemblyName>OpenTK.GLWidget</AssemblyName>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>
     </AppDesignerFolder>
-    <RootNamespace>OpenTK.GLControl</RootNamespace>
+    <RootNamespace>OpenTK.GLWidget</RootNamespace>
     <StartArguments>
     </StartArguments>
     <FileUpgradeFlags>
@@ -40,7 +39,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -48,7 +46,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
-    <DocumentationFile>..\..\Binaries\OpenTK\Debug\OpenTK.GLControl.xml</DocumentationFile>
+    <DocumentationFile>..\..\Binaries\OpenTK\Debug\OpenTK.GLWidget.xml</DocumentationFile>
     <DebugSymbols>True</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <Optimize>False</Optimize>
@@ -58,7 +56,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>full</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -66,7 +63,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>TRACE;</DefineConstants>
-    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLControl.xml</DocumentationFile>
+    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLWidget.xml</DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <Optimize>True</Optimize>
     <OutputPath>..\..\Binaries\OpenTK\Release\</OutputPath>
@@ -75,7 +72,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>none</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Documentation|AnyCPU'">
     <OutputPath>..\..\Binaries\OpenTK\Release\</OutputPath>
@@ -84,8 +80,7 @@
     <Optimize>True</Optimize>
     <DefineConstants>TRACE;</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLControl.xml</DocumentationFile>
-    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLWidget.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nsis|AnyCPU'">
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -93,7 +88,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>TRACE;</DefineConstants>
-    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLControl.xml</DocumentationFile>
+    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLWidget.xml</DocumentationFile>
     <FileAlignment>4096</FileAlignment>
     <Optimize>True</Optimize>
     <OutputPath>..\..\Binaries\OpenTK\Release\</OutputPath>
@@ -102,7 +97,6 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>none</DebugType>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>True</SignAssembly>
@@ -114,79 +108,23 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.Data">
-      <Name>System.Data</Name>
-    </Reference>
-    <Reference Include="System.Drawing">
-      <Name>System.Drawing</Name>
-    </Reference>
-    <Reference Include="System.Windows.Forms">
-      <Name>System.Windows.Forms</Name>
-    </Reference>
-    <Reference Include="System.Xml">
-      <Name>System.Xml</Name>
-    </Reference>
+    <Reference Include="atk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GLControlFactory.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GLControl.Designer.cs">
-      <DependentUpon>GLControl.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="DummyGLControl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GLControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Sdl2GLControl.cs" />
-    <Compile Include="WinGLControl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="IGLControl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="X11GLControl.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CarbonGLControl.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Agl.cs">
-      <DependentUpon>CarbonGLControl.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AglContext.cs">
-      <DependentUpon>CarbonGLControl.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="AglGraphicsMode.cs">
-      <DependentUpon>CarbonGLControl.cs</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Carbon.cs" />
-    <Compile Include="NS.cs">
-      <DependentUpon>CarbonGLControl.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GLWidget.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\OpenTK.snk">
-      <Link>OpenTK.snk</Link>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OpenTK\OpenTK.Core.csproj">
-      <Project>{7fad8904-1e24-4eac-9b64-d0ed631936f9}</Project>
-      <Name>OpenTK.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenTK\OpenTK.Math.csproj">
-      <Project>{68c406cc-bfd9-4d4b-b450-e95574308836}</Project>
-      <Name>OpenTK.Math</Name>
+    <ProjectReference Include="..\OpenTK\OpenTK.Compat.csproj">
+      <Project>{a37a7e14-0000-0000-0000-000000000000}</Project>
+      <Name>OpenTK.Compat</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -203,7 +141,7 @@
     <OutputPath>..\..\Binaries\OpenTK\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE;</DefineConstants>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Binaries\OpenTK\Debug\OpenTK.GLControl.xml</DocumentationFile>
+    <DocumentationFile>..\..\Binaries\OpenTK\Debug\OpenTK.GLWidget.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RemoveIntegerChecks>False</RemoveIntegerChecks>
@@ -212,7 +150,6 @@
     </ConfigurationOverrideFile>
     <RegisterForComInterop>False</RegisterForComInterop>
     <FileAlignment>4096</FileAlignment>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseMinimal|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -220,7 +157,7 @@
     <OutputPath>..\..\Binaries\OpenTK\Release\</OutputPath>
     <DefineConstants>TRACE;</DefineConstants>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLControl.xml</DocumentationFile>
+    <DocumentationFile>..\..\Binaries\OpenTK\Release\OpenTK.GLWidget.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RemoveIntegerChecks>False</RemoveIntegerChecks>
@@ -229,6 +166,5 @@
     </ConfigurationOverrideFile>
     <RegisterForComInterop>False</RegisterForComInterop>
     <FileAlignment>4096</FileAlignment>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
 </Project>
