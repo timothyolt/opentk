@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E3A04AAA-BCDF-4BE6-9D1B-1B9C7E659CB9}</ProjectGuid>
+    <ProjectGuid>{1AC45234-FBC2-406F-8065-06AA2B2538E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibTectonN2</RootNamespace>
-    <AssemblyName>LibTectonN2</AssemblyName>
+    <RootNamespace>OpenTK</RootNamespace>
+    <AssemblyName>OpenTK.Net2</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
